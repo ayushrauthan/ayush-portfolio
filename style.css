@@ -1,0 +1,100 @@
+* {
+  box-sizing: border-box;
+}
+
+:root {
+  --blue: #2563EB;
+  --text: #111827;
+  --background: #F9FAFB;
+  --accent: #DBEAFE;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: "Inter", sans-serif;
+  color: var(--text);
+  background: var(--background);
+}
+
+.hero {
+  min-height: 100vh;
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 32px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.logo {
+  width: 76px;
+  height: 76px;
+  display: grid;
+  place-items: center;
+  border-radius: 18px;
+  background: var(--blue);
+  color: white;
+  font-size: 28px;
+  font-weight: 700;
+  margin-bottom: 48px;
+}
+
+.eyebrow {
+  margin: 0 0 14px;
+  color: var(--blue);
+  font-size: 14px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+}
+
+h1 {
+  margin: 0;
+  font-size: clamp(44px, 8vw, 82px);
+  line-height: 0.98;
+  letter-spacing: -0.045em;
+  max-width: 850px;
+}
+
+.role {
+  margin: 24px 0 0;
+  font-size: clamp(18px, 2.5vw, 24px);
+  line-height: 1.5;
+}
+
+.role span {
+  color: var(--blue);
+  margin: 0 10px;
+}
+
+.intro {
+  margin: 20px 0 0;
+  max-width: 560px;
+  padding: 14px 18px;
+  border-left: 4px solid var(--blue);
+  background: var(--accent);
+  font-size: 17px;
+  line-height: 1.6;
+}
+
+@media (max-width: 600px) {
+  .hero {
+    padding: 24px;
+  }
+
+  .logo {
+    width: 64px;
+    height: 64px;
+    margin-bottom: 36px;
+  }
+
+  .role span {
+    display: none;
+  }
+
+  .role {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+  }
+}
